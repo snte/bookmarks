@@ -946,7 +946,7 @@ class Bookmarks {
 					'user_id' => $qb->createParameter('user_id'),
 					'public' => $qb->createParameter('public'),
 					'added' => isset($date_added)? $date_added : $qb->createFunction('UNIX_TIMESTAMP()'),
-					'lastmodified' => $qb->createFunction('UNIX_TIMESTAMP()'),
+					'lastmodified' => isset($date_added)? $date_added : $qb->createFunction('UNIX_TIMESTAMP()'),
 					'description' => $qb->createParameter('description'),
 				])
 				->where($qb->expr()->eq('user_id', $qb->createParameter('user_id')));
@@ -1138,7 +1138,7 @@ class Bookmarks {
 		}
 		foreach ($this->bookmarksParser->currentFolder['bookmarks'] as $bookmark) {
 			try {
-				$this->addBookmark($userId, $bookmark['href'], $bookmark['title'], $bookmark['tags'], $bookmark['description'], false, [-1]);
+				$this->addBookmark($userId, $bookmark['href'], $bookmark['title'], $bookmark['tags'], $bookmark['description'], false, [-1], $bookmark['add_date']->getTimestamp());
 			} catch (\InvalidArgumentException $e) {
 				$this->logger->logException($e, ['app' => 'bookmarks']);
 				$errors[] =  $this->l->t('Failed to import one bookmark, because: ') . $e->getMessage();
