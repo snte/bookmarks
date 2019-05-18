@@ -877,3 +877,195 @@ button span,
 		top: 0;
 	}
 }
+
+
+/* ------------------------------------------------------------------------- */
+
+.bookmarks {
+    padding: 30px 10px 20px 0;
+}
+.bookmarks.list-view {
+    padding: 40px 0;
+}
+
+/* Bookmarks list view */
+
+.bookmarks .bookmark-card {
+	padding: 6px;
+}
+
+.bookmarks.list-view .bookmark-card {
+	padding: 0;
+	background-image: none !important;
+	background-color: transparent !important;
+	box-shadow: none;
+	border: 0;
+	border-top: 1px solid var(--color-border);
+	opacity: 1;
+}
+
+
+.bookmarks.list-view .bookmark-card {
+	background-image: none !important;
+	background-color: transparent !important;
+	box-shadow: none;
+	border: 0;
+	border-top: 1px solid var(--color-border);
+	opacity: 1;
+}
+.bookmarks.list-view .bookmark-card:hover {
+	transition: background-color 0.3s ease;
+	background-color: var(--color-background-dark) !important;
+}
+
+.bookmarks.list-view .bookmark-card a,
+.bookmarks.list-view .bookmark-card .panel:hover {
+	text-decoration: none !important;
+}
+.bookmarks.list-view .bookmark-card .panel:hover,
+.bookmarks.list-view .bookmark-card .panel:hover a,
+.bookmarks.list-view .bookmark-card .panel:hover h2 {
+	color: #000 !important;
+}
+
+.bookmarks .bookmark-card .panel {
+    padding: 10px 10px 8px 10px;
+}
+.bookmarks.list-view .bookmark-card .panel {
+    padding: 16px 14px 14px 22px;
+	background-color: transparent !important;
+}
+
+.bookmarks.list-view .bookmark-card h2 {
+    min-height: auto;
+    margin-right: 25px;
+    font-size: 12.8px;
+    line-height: 1.5;
+    text-shadow: none;
+	background-image: none;
+	color: var(--color-main-text);
+}
+
+.bookmarks .bookmark-card h2.with-favicon {
+	background-size: 16px;
+	padding-left: 26px;
+}
+.bookmarks.list-view .bookmark-card h2.with-favicon {
+    background-size: 16px;
+    padding-left: 38px;
+}
+
+.bookmarks.list-view .bookmark-card .tags {
+	z-index: 2;
+	top: 11px;
+    right: 40px;
+}
+
+.bookmarks.list-view .bookmark-card .tag-nav-item {
+    background: rgba(34, 34, 34, 0.1);
+    box-shadow: none !important;
+}
+.bookmarks.list-view .bookmark-card .tag-nav-item:hover {
+	background: rgba(34, 34, 34, 0.2);
+}
+
+.bookmarks.list-view .bookmark-card .select-mode-checkbox + label {
+	transform: scale(1);
+    top: 15px;
+    left: 21px;
+    z-index: 2;
+}
+.bookmarks.list-view .bookmark-card .select-mode-checkbox + label:before {
+    width: 14px;
+    height: 14px;
+}
+
+.bookmarks.list-view .bookmark-card .popovermenu {
+    top: 42px;
+    right: 13px;
+}
+.bookmarks.list-view .bookmark-card .popovermenu .menu-filter-add > span:first-child {
+	display: inline-block;
+}
+.bookmark-card .popovermenu {
+    z-index: 2;
+}
+
+
+/* Buttons */
+
+.bookmarks button {
+    opacity: 0.3;
+}
+.bookmarks button:hover {
+    opacity: 0.5;
+}
+
+.bookmarks.list-view .bookmark-card .toggle-actions {
+	top: 13px;
+    right: 10px;
+}
+
+
+/* Buttons display modes */
+
+.bookmarks .bookmarks-display {
+    right: 6px;
+}
+.bookmarks .bookmarks-display button {
+	background-color: transparent;
+	border: none;
+    opacity: 0.5;
+}
+
+.bookmarks .bookmarks-display .action-gridview {
+    display: none;
+}
+.bookmarks.list-view .bookmarks-display .action-gridview {
+    display: inline-block;
+}
+.bookmarks.list-view .bookmarks-display .action-listview {
+    display: none;
+}
+
+
+/* Bookmark Detail */
+
+.bookmark-detail {
+    top: 49px;
+}
+.bookmark-detail::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.bookmark-detail h2 {
+	font-size: 16px;
+	margin-top: 10px;
+	font-weight: normal;
+}
+.bookmark-detail .icon-calendar-dark {
+	margin-right: 6px;
+	vertical-align: text-top;
+}
+.bookmark-detail h2 :link span {
+    margin-right: 8px;
+}
+.bookmark-detail h3 {
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+/* Bookmark list table */
+/*
+.bookmarks.list-view {
+	display: table;
+}
+.bookmarks.list-view .bookmark-card {
+	display: table-row;
+}
+.bookmarks.list-view .bookmark-card > * {
+	display: table-cell;
+	position: relative;
+}
+*/
